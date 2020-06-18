@@ -1,0 +1,28 @@
+header {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto; }
+
+header .box, header .wrapper {
+  display: flex; }
+
+header .box {
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink; }
+  header .box h1 {
+    color: #108fd8;
+    width: 100px;
+    font-size: 30px; }
+    header .box h1 span {
+      font-size: 12px; }
+  header .box h2 {
+    font-size: 30px;
+    color: #108fd8; }
+
+header .wrapper {
+  justify-content: space-around;
+  align-items: flex-end; }
+  header .wrapper .box1 {
+    width: 100px;
+    background-color: red; }

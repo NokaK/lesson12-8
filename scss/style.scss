@@ -1,0 +1,68 @@
+//color
+$aqua-color : rgb(16, 143, 216);
+$pink-color:  pink;
+$red-color: red;
+
+//font 
+
+$size01 : 12px;
+$size02: 14px;
+$size03: 30px;
+
+
+//size
+
+$content-size :100px;
+
+
+//private classes
+
+%conatiner{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+%flex{
+    display: flex;
+}
+
+// mixines
+
+@mixin flex-content($horizontal,$vertical) {
+    justify-content: $horizontal;//space-between
+    align-items: $vertical;//center
+}
+
+header{
+    @extend %conatiner;
+    .box {
+        @extend %flex;
+        @include flex-content(space-between,center);
+        background-color: $pink-color;
+        h1 {
+            color: $aqua-color;
+            width:$content-size;
+            font-size: $size03;
+            span {
+                font-size: $size01;
+            }
+        }
+        h2 {
+            font-size: $size03;
+            color: $aqua-color;
+        }
+    }
+    .wrapper{
+        @extend %flex;
+        @include flex-content(space-around,flex-end);
+        .box1{
+            width :$content-size;
+            background-color: $red-color;
+        }
+    }
+}
+
+// section {
+
+// }
+
